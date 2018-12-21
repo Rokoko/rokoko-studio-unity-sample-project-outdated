@@ -1,12 +1,20 @@
-# Rokoko Studio - Sample project for Unity
+<h2 align="center"> Rokoko Studio - Sample project for Unity</h1>
 
-More info coming soon.
+[Rokoko Studio](https://www.rokoko.com/en/products/studio) is A powerful and intuitive software for recording, visualizing and exporting motion capture.
 
-# Feedback
+This sample project for Unity contains necessary means to get you started with your application.
 
-- File a bug in [GitHub Issues](https://github.com/RokokoElectronics/studio-unity-sample-project/issues)
+---
 
-# License
+## Documentation
+
+Coming soon.
+
+## Issues
+
+File a bug in [GitHub Issues](https://github.com/RokokoElectronics/studio-unity-sample-project/issues)
+
+## License
 
 Copyright (c) Rokoko Electronics ApS. All rights reserved.
 

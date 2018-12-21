@@ -18,4 +18,4 @@ File a bug in [GitHub Issues](https://github.com/RokokoElectronics/studio-unity-
 
 Copyright (c) Rokoko Electronics ApS. All rights reserved.
 
-Licensed under the [GNU GPLv3](https://github.com/RokokoElectronics/studio-unity-sample-project/LICENSE.md) License.
+Licensed under the [GNU GPLv3](https://github.com/RokokoElectronics/rokoko-studio-unity-sample-project/blob/master/LICENSE.md) License.

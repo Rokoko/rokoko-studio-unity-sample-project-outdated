@@ -32,6 +32,15 @@ Uses the latest prop information to control a GameObject
 | ------------- | ------------- |
 | Prop Name  | The friendly name of the prop as defined in Studio.  |
 
+- Virtual Production Tracker (Assets/Rokoko/VirtualProduction/VirtualProductionTracker.cs)
+
+Uses the latest tracker information to control a GameObject
+
+| Parameter  | Description |
+| ------------- | ------------- |
+| Tracker Id  | The ID of the tracker, e.g. "1" or "2".  |
+| Follow Live Tracker  | Whether to follow a live tracker in Studio or one from playback.  |
+
 - Virtual Production Trackers  (Assets/Rokoko/VirtualProduction/VirtualProductionTrackers.cs)
 
 Helper component that is used to visualize the trackers in 3D space.

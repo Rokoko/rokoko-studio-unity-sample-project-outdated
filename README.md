@@ -6,6 +6,10 @@ This sample project for Unity contains necessary means to get you started with y
 
 ---
 
+## Getting Started
+
+To learn more about how to use Virtual Production in Rokoko Studio, read our guide [here](https://rokoko.atlassian.net/servicedesk/customer/kb/view/861208607)
+
 ## Documentation
 
 #### Virtual production

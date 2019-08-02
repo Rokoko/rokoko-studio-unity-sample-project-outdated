@@ -9,7 +9,7 @@ namespace Rokoko.VirtualProduction
         public int version;
         public Prop[] props;
         public Tracker[] trackers;
-        public Face[] faces;
+        public FaceData[] faces;
     }
 
     [System.Serializable]
@@ -100,7 +100,7 @@ namespace Rokoko.VirtualProduction
     }
 
     [System.Serializable]
-    public class Face
+    public class FaceData
     {
         public string type;
         public int version; // 4

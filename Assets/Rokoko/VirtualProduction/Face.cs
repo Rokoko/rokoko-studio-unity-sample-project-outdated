@@ -6,7 +6,7 @@ namespace Rokoko.VirtualProduction
 {
     public class Face : MonoBehaviour
     {
-        public string faceId = "1";
+        public string faceId = "";
 
         [SerializeField] private SkinnedMeshRenderer _faceSkin;
         [SerializeField] private FaceBlendshapeMap _blendshapeMapping;
@@ -208,13 +208,13 @@ namespace Rokoko.VirtualProduction
             for (int i = 0; i < m.blendShapeCount; i++)
             {
                 string s = m.GetBlendShapeName(i);
-                print("Blend Shape: " + i + " " + s); // Blend Shape: 4 FightingLlamaStance
                 arr[i] = s;
             }
 
             return arr;
         }
 
+        [System.Serializable]
         public struct FaceBlendshapeMap
         {
             public string eyeBlinkLeft; // 4

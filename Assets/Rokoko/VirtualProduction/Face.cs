@@ -9,7 +9,10 @@ namespace Rokoko.VirtualProduction
         public string faceId = "";
 
         [SerializeField] private SkinnedMeshRenderer _faceSkin;
+        [SerializeField] private bool logWarnings;
+        [Space(10)]
         [SerializeField] private FaceBlendshapeMap _blendshapeMapping;
+        
         private List<string> blendshapeNames;
         private void Reset()
         {
@@ -146,58 +149,70 @@ namespace Rokoko.VirtualProduction
 
         private void ApplyFace(FaceData face)
         {
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeBlinkLeft), face.eyeBlinkLeft);
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeLookDownLeft), face.eyeLookDownLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeLookInLeft), face.eyeLookInLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeLookOutLeft), face.eyeLookOutLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeLookUpLeft), face.eyeLookUpLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeSquintLeft), face.eyeSquintLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeWideLeft), face.eyeWideLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeBlinkRight), face.eyeBlinkRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeLookDownRight), face.eyeLookDownRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeLookInRight), face.eyeLookInRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeLookOutRight), face.eyeLookOutRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeLookUpRight), face.eyeLookUpRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeSquintRight), face.eyeSquintRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.eyeWideRight), face.eyeWideRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.jawForward), face.jawForward);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.jawLeft), face.jawLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.jawRight), face.jawRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.jawOpen), face.jawOpen);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthClose), face.mouthClose);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthFunnel), face.mouthFunnel);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthPucker), face.mouthPucker);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthLeft), face.mouthLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthRight), face.mouthRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthSmileLeft), face.mouthSmileLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthSmileRight), face.mouthSmileRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthFrownLeft), face.mouthFrownLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthFrownRight), face.mouthFrownRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthDimpleLeft), face.mouthDimpleLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthDimpleRight), face.mouthDimpleRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthStretchLeft), face.mouthStretchLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthStretchRight), face.mouthStretchRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthRollLower), face.mouthRollLower);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthRollUpper), face.mouthRollUpper);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthShrugLower), face.mouthShrugLower);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthShrugUpper), face.mouthShrugUpper);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthPressLeft), face.mouthPressLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthPressRight), face.mouthPressRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthLowerDownLeft), face.mouthLowerDownLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthLowerDownRight), face.mouthLowerDownRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthUpperUpLeft), face.mouthUpperUpLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.mouthUpperUpRight), face.mouthUpperUpRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.browDownLeft), face.browDownLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.browDownRight), face.browDownRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.browInnerUp), face.browInnerUp);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.browOuterUpLeft), face.browOuterUpLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.browOuterUpRight), face.browOuterUpRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.cheekPuff), face.cheekPuff);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.cheekSquintLeft), face.cheekSquintLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.cheekSquintRight), face.cheekSquintRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.noseSneerLeft), face.noseSneerLeft);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.noseSneerRight), face.noseSneerRight);    
-            _faceSkin.SetBlendShapeWeight(blendshapeNames.IndexOf(_blendshapeMapping.tongueOut), face.tongueOut);    
+            ApplyBlendShape(_blendshapeMapping.eyeBlinkLeft, blendshapeNames.IndexOf(_blendshapeMapping.eyeBlinkLeft), face.eyeBlinkLeft);
+            ApplyBlendShape(_blendshapeMapping.eyeLookDownLeft, blendshapeNames.IndexOf(_blendshapeMapping.eyeLookDownLeft), face.eyeLookDownLeft);    
+            ApplyBlendShape(_blendshapeMapping.eyeLookInLeft, blendshapeNames.IndexOf(_blendshapeMapping.eyeLookInLeft), face.eyeLookInLeft);    
+            ApplyBlendShape(_blendshapeMapping.eyeLookOutLeft, blendshapeNames.IndexOf(_blendshapeMapping.eyeLookOutLeft), face.eyeLookOutLeft);    
+            ApplyBlendShape(_blendshapeMapping.eyeLookUpLeft, blendshapeNames.IndexOf(_blendshapeMapping.eyeLookUpLeft), face.eyeLookUpLeft);    
+            ApplyBlendShape(_blendshapeMapping.eyeSquintLeft, blendshapeNames.IndexOf(_blendshapeMapping.eyeSquintLeft), face.eyeSquintLeft);    
+            ApplyBlendShape(_blendshapeMapping.eyeWideLeft, blendshapeNames.IndexOf(_blendshapeMapping.eyeWideLeft), face.eyeWideLeft);    
+            ApplyBlendShape(_blendshapeMapping.eyeBlinkRight, blendshapeNames.IndexOf(_blendshapeMapping.eyeBlinkRight), face.eyeBlinkRight);    
+            ApplyBlendShape(_blendshapeMapping.eyeLookDownRight, blendshapeNames.IndexOf(_blendshapeMapping.eyeLookDownRight), face.eyeLookDownRight);    
+            ApplyBlendShape(_blendshapeMapping.eyeLookInRight, blendshapeNames.IndexOf(_blendshapeMapping.eyeLookInRight), face.eyeLookInRight);    
+            ApplyBlendShape(_blendshapeMapping.eyeLookOutRight, blendshapeNames.IndexOf(_blendshapeMapping.eyeLookOutRight), face.eyeLookOutRight);    
+            ApplyBlendShape(_blendshapeMapping.eyeLookUpRight, blendshapeNames.IndexOf(_blendshapeMapping.eyeLookUpRight), face.eyeLookUpRight);    
+            ApplyBlendShape(_blendshapeMapping.eyeSquintRight, blendshapeNames.IndexOf(_blendshapeMapping.eyeSquintRight), face.eyeSquintRight);    
+            ApplyBlendShape(_blendshapeMapping.eyeWideRight, blendshapeNames.IndexOf(_blendshapeMapping.eyeWideRight), face.eyeWideRight);    
+            ApplyBlendShape(_blendshapeMapping.jawForward, blendshapeNames.IndexOf(_blendshapeMapping.jawForward), face.jawForward);    
+            ApplyBlendShape(_blendshapeMapping.jawLeft, blendshapeNames.IndexOf(_blendshapeMapping.jawLeft), face.jawLeft);    
+            ApplyBlendShape(_blendshapeMapping.jawRight, blendshapeNames.IndexOf(_blendshapeMapping.jawRight), face.jawRight);    
+            ApplyBlendShape(_blendshapeMapping.jawOpen, blendshapeNames.IndexOf(_blendshapeMapping.jawOpen), face.jawOpen);    
+            ApplyBlendShape(_blendshapeMapping.mouthClose, blendshapeNames.IndexOf(_blendshapeMapping.mouthClose), face.mouthClose);    
+            ApplyBlendShape(_blendshapeMapping.mouthFunnel, blendshapeNames.IndexOf(_blendshapeMapping.mouthFunnel), face.mouthFunnel);    
+            ApplyBlendShape(_blendshapeMapping.mouthPucker, blendshapeNames.IndexOf(_blendshapeMapping.mouthPucker), face.mouthPucker);    
+            ApplyBlendShape(_blendshapeMapping.mouthLeft, blendshapeNames.IndexOf(_blendshapeMapping.mouthLeft), face.mouthLeft);    
+            ApplyBlendShape(_blendshapeMapping.mouthRight, blendshapeNames.IndexOf(_blendshapeMapping.mouthRight), face.mouthRight);    
+            ApplyBlendShape(_blendshapeMapping.mouthSmileLeft, blendshapeNames.IndexOf(_blendshapeMapping.mouthSmileLeft), face.mouthSmileLeft);    
+            ApplyBlendShape(_blendshapeMapping.mouthSmileRight, blendshapeNames.IndexOf(_blendshapeMapping.mouthSmileRight), face.mouthSmileRight);    
+            ApplyBlendShape(_blendshapeMapping.mouthFrownLeft, blendshapeNames.IndexOf(_blendshapeMapping.mouthFrownLeft), face.mouthFrownLeft);    
+            ApplyBlendShape(_blendshapeMapping.mouthFrownRight, blendshapeNames.IndexOf(_blendshapeMapping.mouthFrownRight), face.mouthFrownRight);    
+            ApplyBlendShape(_blendshapeMapping.mouthDimpleLeft, blendshapeNames.IndexOf(_blendshapeMapping.mouthDimpleLeft), face.mouthDimpleLeft);    
+            ApplyBlendShape(_blendshapeMapping.mouthDimpleRight, blendshapeNames.IndexOf(_blendshapeMapping.mouthDimpleRight), face.mouthDimpleRight);    
+            ApplyBlendShape(_blendshapeMapping.mouthStretchLeft, blendshapeNames.IndexOf(_blendshapeMapping.mouthStretchLeft), face.mouthStretchLeft);    
+            ApplyBlendShape(_blendshapeMapping.mouthStretchRight, blendshapeNames.IndexOf(_blendshapeMapping.mouthStretchRight), face.mouthStretchRight);    
+            ApplyBlendShape(_blendshapeMapping.mouthRollLower, blendshapeNames.IndexOf(_blendshapeMapping.mouthRollLower), face.mouthRollLower);    
+            ApplyBlendShape(_blendshapeMapping.mouthRollUpper, blendshapeNames.IndexOf(_blendshapeMapping.mouthRollUpper), face.mouthRollUpper);    
+            ApplyBlendShape(_blendshapeMapping.mouthShrugLower, blendshapeNames.IndexOf(_blendshapeMapping.mouthShrugLower), face.mouthShrugLower);    
+            ApplyBlendShape(_blendshapeMapping.mouthShrugUpper, blendshapeNames.IndexOf(_blendshapeMapping.mouthShrugUpper), face.mouthShrugUpper);    
+            ApplyBlendShape(_blendshapeMapping.mouthPressLeft, blendshapeNames.IndexOf(_blendshapeMapping.mouthPressLeft), face.mouthPressLeft);    
+            ApplyBlendShape(_blendshapeMapping.mouthPressRight, blendshapeNames.IndexOf(_blendshapeMapping.mouthPressRight), face.mouthPressRight);    
+            ApplyBlendShape(_blendshapeMapping.mouthLowerDownLeft, blendshapeNames.IndexOf(_blendshapeMapping.mouthLowerDownLeft), face.mouthLowerDownLeft);    
+            ApplyBlendShape(_blendshapeMapping.mouthLowerDownRight, blendshapeNames.IndexOf(_blendshapeMapping.mouthLowerDownRight), face.mouthLowerDownRight);    
+            ApplyBlendShape(_blendshapeMapping.mouthUpperUpLeft, blendshapeNames.IndexOf(_blendshapeMapping.mouthUpperUpLeft), face.mouthUpperUpLeft);    
+            ApplyBlendShape(_blendshapeMapping.mouthUpperUpRight, blendshapeNames.IndexOf(_blendshapeMapping.mouthUpperUpRight), face.mouthUpperUpRight);    
+            ApplyBlendShape(_blendshapeMapping.browDownLeft, blendshapeNames.IndexOf(_blendshapeMapping.browDownLeft), face.browDownLeft);    
+            ApplyBlendShape(_blendshapeMapping.browDownRight, blendshapeNames.IndexOf(_blendshapeMapping.browDownRight), face.browDownRight);    
+            ApplyBlendShape(_blendshapeMapping.browInnerUp, blendshapeNames.IndexOf(_blendshapeMapping.browInnerUp), face.browInnerUp);    
+            ApplyBlendShape(_blendshapeMapping.browOuterUpLeft, blendshapeNames.IndexOf(_blendshapeMapping.browOuterUpLeft), face.browOuterUpLeft);    
+            ApplyBlendShape(_blendshapeMapping.browOuterUpRight, blendshapeNames.IndexOf(_blendshapeMapping.browOuterUpRight), face.browOuterUpRight);    
+            ApplyBlendShape(_blendshapeMapping.cheekPuff, blendshapeNames.IndexOf(_blendshapeMapping.cheekPuff), face.cheekPuff);    
+            ApplyBlendShape(_blendshapeMapping.cheekSquintLeft, blendshapeNames.IndexOf(_blendshapeMapping.cheekSquintLeft), face.cheekSquintLeft);    
+            ApplyBlendShape(_blendshapeMapping.cheekSquintRight, blendshapeNames.IndexOf(_blendshapeMapping.cheekSquintRight), face.cheekSquintRight);    
+            ApplyBlendShape(_blendshapeMapping.noseSneerLeft, blendshapeNames.IndexOf(_blendshapeMapping.noseSneerLeft), face.noseSneerLeft);    
+            ApplyBlendShape(_blendshapeMapping.noseSneerRight, blendshapeNames.IndexOf(_blendshapeMapping.noseSneerRight), face.noseSneerRight);    
+            ApplyBlendShape(_blendshapeMapping.tongueOut, blendshapeNames.IndexOf(_blendshapeMapping.tongueOut), face.tongueOut);    
+        }
+
+        private void ApplyBlendShape(string blendshapeName, int blendshapeIndex, float value)
+        {
+            if (blendshapeIndex >= 0)
+            {
+                _faceSkin.SetBlendShapeWeight(blendshapeIndex, value);
+            }
+            else if (logWarnings)
+            {
+                Debug.LogWarning($"{blendshapeName} not found");
+            }
         }
 
         public string[] GetBlendShapeNames()

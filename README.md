@@ -54,6 +54,15 @@ Helper component that is used to visualize the trackers in 3D space.
 | Tracker Mesh  | A mesh that will be used to visualize the tracker.  |
 | Tracker Material  | The material that will be used to render the tracker.  |
 
+- Face (Assets/Rokoko/VirtualProduction/Face.cs)
+
+| Parameter  | Description |
+| ------------- | ------------- |
+| Face Id  | The ID of the face, e.g. "kfQ92I"  |
+| Face Skin  | The skin mesh renderer with the appropriate blendshapes. |
+| Log Warnings | Will make a warning log for every blendshape that can't be found. |
+| Blendshape Mapping | Mapping by name of blendshapes between the skin mesh renderer and the incoming data. |
+
 Virtual production data format
 
 The structures representing the format can be found in the Assets/Rokoko/VirtualProduction/VirtualProductionStructures.cs.

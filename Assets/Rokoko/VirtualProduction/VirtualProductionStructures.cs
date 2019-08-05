@@ -9,6 +9,7 @@ namespace Rokoko.VirtualProduction
         public int version;
         public Prop[] props;
         public Tracker[] trackers;
+        public FaceData[] faces;
     }
 
     [System.Serializable]
@@ -96,5 +97,67 @@ namespace Rokoko.VirtualProduction
         public VRTrackerType trackerType;
         public string RenderModelName;
         public float battery;
+    }
+
+    [System.Serializable]
+    public class FaceData
+    {
+        public string type;
+        public int version; // 4
+        public float timestamp; // 4
+        public string provider; // 20
+        public string faceId; // 20
+        public float eyeBlinkLeft; // 4
+        public float eyeLookDownLeft; // 4
+        public float eyeLookInLeft; // 4
+        public float eyeLookOutLeft; // 4
+        public float eyeLookUpLeft;
+        public float eyeSquintLeft;
+        public float eyeWideLeft;
+        public float eyeBlinkRight;
+        public float eyeLookDownRight;
+        public float eyeLookInRight;
+        public float eyeLookOutRight;
+        public float eyeLookUpRight;
+        public float eyeSquintRight;
+        public float eyeWideRight;
+        public float jawForward;
+        public float jawLeft;
+        public float jawRight;
+        public float jawOpen;
+        public float mouthClose;
+        public float mouthFunnel;
+        public float mouthPucker;
+        public float mouthLeft;
+        public float mouthRight;
+        public float mouthSmileLeft;
+        public float mouthSmileRight;
+        public float mouthFrownLeft;
+        public float mouthFrownRight;
+        public float mouthDimpleLeft;
+        public float mouthDimpleRight;
+        public float mouthStretchLeft;
+        public float mouthStretchRight;
+        public float mouthRollLower;
+        public float mouthRollUpper;
+        public float mouthShrugLower;
+        public float mouthShrugUpper;
+        public float mouthPressLeft;
+        public float mouthPressRight;
+        public float mouthLowerDownLeft;
+        public float mouthLowerDownRight;
+        public float mouthUpperUpLeft;
+        public float mouthUpperUpRight;
+        public float browDownLeft;
+        public float browDownRight;
+        public float browInnerUp;
+        public float browOuterUpLeft;
+        public float browOuterUpRight;
+        public float cheekPuff;
+        public float cheekSquintLeft;
+        public float cheekSquintRight;
+        public float noseSneerLeft;
+        public float noseSneerRight;
+        public float tongueOut;
     }
 }

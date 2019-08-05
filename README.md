@@ -60,6 +60,7 @@ Helper component that is used to visualize the trackers in 3D space.
 | ------------- | ------------- |
 | Face Id  | The ID of the face, e.g. "kfQ92I"  |
 | Face Skin  | The skin mesh renderer with the appropriate blendshapes. |
+| Log Warnings | Will make a warning log for every blendshape that can't be found. |
 | Blendshape Mapping | Mapping by name of blendshapes between the skin mesh renderer and the incoming data. |
 
 Virtual production data format
